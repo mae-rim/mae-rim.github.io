@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>MAERIM | タイ古式マッサージ 成増</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho+B1:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-deep:#1F3B30;
+    --green-mid:#2F5446;
+    --sand:#F3EBDA;
+    --cream:#FBF8F1;
+    --gold:#B98A33;
+    --ink:#26241F;
+    --line:rgba(185,138,51,0.35);
+    --maxw:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media(max-width:640px){
+    html{scroll-padding-top:24px;}
+  }
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Noto Sans JP',sans-serif;
+    font-weight:400;
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.brand{
+    font-family:'Shippori Mincho B1',serif;
+    font-weight:700;
+    letter-spacing:.03em;
+    color:var(--green-deep);
+  }
+  .en{
+    font-family:'Cormorant Garamond',serif;
+    letter-spacing:.12em;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:transparent;
+    transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
+    padding:22px 0;
+  }
+  header.solid{
+    background:rgba(251,248,241,0.92);
+    backdrop-filter:blur(6px);
+    box-shadow:0 1px 0 var(--line);
+    padding:14px 0;
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .brand{font-size:30px;color:var(--cream);transition:color .4s ease;letter-spacing:.14em;}
+  header.solid .brand{color:var(--green-deep);}
+  .navlinks{display:flex;gap:34px;font-size:14px;letter-spacing:.08em;}
+  .navlinks a{color:var(--cream);opacity:.9;transition:color .4s ease,opacity .2s;}
+  header.solid .navlinks a{color:var(--green-deep);}
+  .navlinks a:hover{opacity:.6;}
+  /* メニューオープン時はリンク色を必ずクリームに */
+  .navlinks.open a{color:var(--cream)!important;opacity:1;}
+  /* ハンバーガーボタン */
+  .hamburger{
+    display:none;flex-direction:column;justify-content:center;gap:6px;
+    width:44px;height:44px;cursor:pointer;
+    position:fixed;top:14px;right:16px;z-index:9999;
+    padding:10px;
+  }
+  .hamburger span{
+    display:block;width:24px;height:1.5px;
+    background:var(--cream);transition:background .4s ease, transform .3s ease, opacity .3s ease;
+  }
+  .hamburger.bg-solid span{background:var(--green-deep);}
+  .hamburger.open span{background:var(--cream)!important;}
+  .hamburger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg);}
+  @media (max-width:640px){
+    .hamburger{display:flex;}
+    .navlinks{
+      position:fixed;top:0;left:0;
+      width:100vw;height:100vh;
+      z-index:150;
+      background:var(--green-deep);
+      flex-direction:column;align-items:center;justify-content:center;
+      gap:36px;font-size:20px;letter-spacing:.12em;
+      transform:translateX(100%);transition:transform .35s ease;
+      overflow:hidden;
+    }
+    .navlinks.open{transform:translateX(0);}
+    .navlinks a{color:var(--cream);opacity:1;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    min-height:80vh;
+    box-sizing:border-box;
+    background:var(--green-deep);
+    color:var(--cream);
+    display:flex;
+    align-items:center;
+    padding-top:0;
+    overflow:hidden;
+  }
+  /* 写真はhero全体を覆う（navはオーバーレイ上に重なる） */
+  .hero-photo{
+    position:absolute;inset:0;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+    background-color: var(--green-deep);
+    z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(100deg, rgba(18,38,32,.92) 0%, rgba(31,59,48,.82) 38%, rgba(31,59,48,.45) 70%, rgba(18,38,32,.55) 100%);
+  }
+  .hero-river{
+    position:absolute;inset:0;width:100%;height:100%;opacity:.55;z-index:2;
+  }
+  .hero-content{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;padding:0 28px;width:100%;}
+  .eyebrow{
+    font-size:13px;letter-spacing:.25em;color:var(--gold);
+    margin:0 0 18px;text-transform:uppercase;
+  }
+  .hero h1{
+    color:var(--cream);
+    font-size:clamp(26px,6vw,58px);
+    line-height:1.45;
+    margin:0 0 26px;
+  }
+  .hero p.lead{
+    max-width:480px;
+    font-size:15.5px;
+    color:rgba(251,248,241,.85);
+    margin:0 0 38px;
+  }
+  .badges{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:42px;}
+  .badge{
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:8px 18px;
+    font-size:12.5px;
+    letter-spacing:.05em;
+    color:var(--sand);
+  }
+  /* スマホ：レスポンシブ対応 */
+  @media(max-width:640px){
+    /* 写真：全体表示（contain） */
+    .hero-photo{
+      object-fit:contain;
+      object-position:center top;
+    }
+    .hero{padding-top:70px;}
+    /* SCROLLを非表示 */
+    .scrolldown{display:none;}
+    /* テキストエリア */
+    .hero-content{padding:0 24px;box-sizing:border-box;width:100%;}
+    .eyebrow{font-size:12px;margin-bottom:12px;}
+    .hero h1{font-size:clamp(26px,7.5vw,36px);margin-bottom:16px;line-height:1.5;}
+    .hero h1 br{display:none;}
+    .hero p.lead{font-size:14.5px;margin-bottom:24px;}
+    .badges{gap:8px;margin-bottom:26px;}
+    .badge{padding:7px 14px;font-size:11.5px;}
+  }
+  .cta{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--gold);
+    color:var(--green-deep);
+    font-size:14px;letter-spacing:.08em;
+    padding:15px 30px;
+    border-radius:2px;
+    transition:transform .25s ease, background .25s ease;
+  }
+  .cta:hover{transform:translateY(-2px);background:#cf9c45;}
+  .scrolldown{
+    position:absolute;bottom:32px;left:28px;z-index:3;
+    font-size:11px;letter-spacing:.2em;color:rgba(251,248,241,.55);
+    display:flex;align-items:center;gap:10px;
+  }
+  .scrolldown::after{
+    content:'';width:1px;height:36px;background:rgba(251,248,241,.4);
+    animation:dropline 1.8s ease-in-out infinite;
+  }
+  @keyframes dropline{0%,100%{transform:scaleY(.4);opacity:.3;}50%{transform:scaleY(1);opacity:.8;}}
+  @media(max-width:640px){.scrolldown{display:none!important;}}
+
+  /* ---------- print setting ---------- */
+  @media print {
+    .hero-photo{
+      object-fit: contain !important;
+      width: 100%;
+      max-width: 1280px;   /* 元画像の横幅 */
+      max-height: 960px;   /* 元画像の縦幅 */
+      margin: 0 auto;
+    }
+
+    .hero{
+      min-height: auto !important;
+      height: auto !important;
+      padding: 40px 0 !important;
+    }
+  }
+
+  /* ---------- section frame ---------- */
+  section{padding:120px 0;position:relative;}
+  .section-head{margin-bottom:56px;}
+  .section-head .en{display:block;font-size:14px;color:var(--gold);margin-bottom:10px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,32px);margin:0;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease, transform .8s ease;}
+  .reveal.in{opacity:1;transform:translateY(0);}
+
+  /* ---------- about ---------- */
+  .about{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:start;}
+  @media (max-width:760px){.about{grid-template-columns:1fr;gap:36px;}}
+  .about p{font-size:15px;color:#3c3a33;}
+  .about p+p{margin-top:18px;}
+  .icon-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:8px;}
+  .icon-card{
+    border:1px solid var(--line);
+    padding:26px 22px;
+    border-radius:4px;
+    background:var(--sand);
+  }
+  .icon-card svg{width:30px;height:30px;color:var(--gold);margin-bottom:14px;}
+  .icon-card h3{font-size:15px;margin:0 0 8px;color:var(--green-deep);}
+  .icon-card p{font-size:12.5px;color:#5a5747;margin:0;line-height:1.7;}
+
+  /* ---------- photos ---------- */
+  .about-photo{
+    aspect-ratio:4/5;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    margin-bottom:24px;
+  }
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  .gallery-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px;}
+  @media (max-width:760px){.gallery-grid{grid-template-columns:1fr 1fr;}}
+  .gallery-grid figure{margin:0;border:1px solid var(--line);border-radius:4px;overflow:hidden;aspect-ratio:4/5;}
+  .gallery-grid figure:first-child{grid-row:span 2;}
+  @media (max-width:760px){.gallery-grid figure:first-child{grid-row:auto;grid-column:span 2;aspect-ratio:16/9;}}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;}
+  .gallery-captions{margin-top:24px;text-align:center;}
+  .gallery-caption-text{
+    font-size:14px;color:#5a5747;margin:0;
+    line-height:2;
+    max-width:640px;margin-inline:auto;
+  }
+
+  .storefront-photo{
+    aspect-ratio:4/3;
+    border-radius:4px;
+    overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .storefront-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ---------- hours ---------- */
+  .hours-block{
+    background:var(--green-deep);
+    color:var(--sand);
+    border-radius:4px;
+    padding:48px 44px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  @media (max-width:760px){.hours-block{grid-template-columns:1fr;padding:36px 26px;}}
+  .hours-block h3{color:var(--sand);font-size:16px;margin:0 0 18px;letter-spacing:.05em;}
+  .hours-table{font-size:14px;}
+  .hours-table div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(251,248,241,.15);}
+  .hours-note{font-size:12.5px;color:rgba(251,248,241,.7);margin-top:18px;line-height:1.9;}
+
+  /* ---------- reservation ---------- */
+  .reserve-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;}
+  @media (max-width:760px){.reserve-grid{grid-template-columns:1fr;}}
+  .qr-frame{
+    background:var(--sand);
+    border:1px solid var(--line);
+    padding:30px;
+    display:flex;flex-direction:column;align-items:center;gap:16px;
+    border-radius:4px;
+  }
+  .qr-frame .qr-ph{
+    width:160px;height:160px;
+    background:repeating-linear-gradient(45deg,var(--green-deep) 0 6px,transparent 6px 12px),
+               repeating-linear-gradient(-45deg,var(--green-deep) 0 6px,transparent 6px 12px);
+    background-blend-mode:multiply;
+    background-color:#fff;
+    opacity:.85;
+    border-radius:2px;
+  }
+  .qr-frame span{font-size:12px;color:#5a5747;letter-spacing:.04em;}
+  .steps{list-style:none;margin:0;padding:0;}
+  .steps li{
+    display:flex;gap:18px;margin-bottom:26px;
+  }
+  .steps .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;color:var(--gold);
+    border:1px solid var(--line);
+    width:38px;height:38px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .steps h4{margin:0 0 4px;font-size:14.5px;color:var(--green-deep);font-weight:600;font-family:'Noto Sans JP',sans-serif;}
+  .steps p{margin:0;font-size:13px;color:#5a5747;}
+
+  /* ---------- access ---------- */
+  .access-block{
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:24px 28px;
+    margin-bottom:20px;
+  }
+  .access-block h3{
+    font-size:13px;color:var(--gold);letter-spacing:.12em;
+    margin:0 0 10px;
+    font-family:'Noto Sans JP',sans-serif;font-weight:600;
+    text-transform:uppercase;
+  }
+  .access-block p{margin:0;font-size:14.5px;line-height:1.85;}
+  .access-stations{
+    display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;
+  }
+  .access-station-tag{
+    background:var(--green-deep);color:var(--cream);
+    font-size:11.5px;letter-spacing:.04em;
+    padding:5px 13px;border-radius:999px;white-space:nowrap;
+  }
+  .access-direction{
+    font-size:13px;color:#6a6558;line-height:2;margin:0;
+  }
+  .access-photo-map{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:20px;
+    align-items:stretch;
+  }
+  @media(max-width:760px){.access-photo-map{grid-template-columns:1fr;}}
+  .access-photo-map .storefront-photo{
+    border-radius:4px;
+    border:1px solid var(--line);
+    overflow:hidden;
+    aspect-ratio:4/3;
+  }
+  .access-photo-map .storefront-photo img{
+    width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .access-map{
+    border-radius:4px;overflow:hidden;
+    border:1px solid var(--line);
+    min-height:280px;
+  }
+  .access-map iframe{width:100%;height:100%;border:0;display:block;min-height:280px;}
+  @media (max-width:760px){.access-map,.access-map iframe{min-height:260px;}}
+
+  /* ---------- menu ---------- */
+  .menu-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+  }
+  @media(max-width:760px){.menu-grid{grid-template-columns:1fr;gap:28px;}}
+
+  .menu-category{
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+  }
+  .menu-category-head{
+    background:var(--green-deep);
+    color:var(--cream);
+    padding:16px 24px;
+    font-size:13px;
+    letter-spacing:.1em;
+    font-family:'Noto Sans JP',sans-serif;
+    font-weight:600;
+  }
+  .menu-items{padding:8px 0;}
+  .menu-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:13px 24px;
+    border-bottom:1px solid var(--line);
+    gap:16px;
+  }
+  .menu-row:last-child{border-bottom:none;}
+  .menu-name{font-size:14px;color:var(--ink);}
+  .menu-sub{font-size:11.5px;color:#8a8270;margin-top:3px;}
+  .menu-price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    color:var(--green-deep);
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .menu-price small{font-size:12px;font-family:'Noto Sans JP',sans-serif;color:#8a8270;}
+
+  .menu-note{
+    font-size:12.5px;color:#7a7568;
+    margin-top:20px;
+    text-align:center;
+  }
+  .menu-cta{
+    display:flex;justify-content:center;margin-top:36px;
+  }
+
+  /* ---------- contact ---------- */
+  .contact-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:28px;
+    padding:60px 0 20px;
+  }
+  .contact-inner p{
+    font-size:15px;
+    color:#5a5747;
+    text-align:center;
+    margin:0;
+    line-height:2;
+  }
+  .contact-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    background:var(--green-deep);
+    color:var(--cream);
+    font-size:14px;
+    letter-spacing:.1em;
+    padding:16px 38px;
+    border-radius:2px;
+    transition:background .25s ease, transform .25s ease;
+    border:1px solid transparent;
+  }
+  .contact-btn:hover{
+    background:var(--green-mid);
+    transform:translateY(-2px);
+  }
+  .contact-btn svg{
+    width:18px;height:18px;flex-shrink:0;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--green-deep);
+    color:rgba(251,248,241,.8);
+    padding:64px 0 32px;
+  }
+  .foot-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;margin-bottom:52px;}
+  .foot-brand .brand{color:var(--cream);font-size:42px;letter-spacing:.12em;line-height:1;}
+  .foot-brand .foot-tagline{
+    font-size:13px;color:rgba(251,248,241,.5);
+    letter-spacing:.22em;margin-top:12px;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .foot-brand .foot-address{
+    font-size:12.5px;color:rgba(251,248,241,.45);
+    margin-top:14px;line-height:1.8;
+  }
+  .foot-right{display:flex;flex-direction:column;align-items:flex-end;gap:20px;}
+  .sns{display:flex;gap:14px;}
+  .sns a{
+    width:44px;height:44px;border:1px solid rgba(251,248,241,.25);
+    border-radius:50%;display:flex;align-items:center;justify-content:center;
+    transition:border-color .25s ease, background .25s ease;
+  }
+  .sns a:hover{border-color:var(--gold);background:rgba(185,138,51,.12);}
+  .sns svg{width:18px;height:18px;}
+  .foot-reserve{
+    display:inline-flex;align-items:center;gap:10px;
+    border:1px solid rgba(185,138,51,.5);
+    color:var(--gold);
+    font-size:13px;letter-spacing:.08em;
+    padding:12px 26px;border-radius:2px;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  .foot-reserve:hover{background:rgba(185,138,51,.12);border-color:var(--gold);}
+  .foot-bottom{
+    border-top:1px solid rgba(251,248,241,.12);
+    padding-top:24px;
+    display:flex;justify-content:center;
+    font-size:11.5px;color:rgba(251,248,241,.35);
+    letter-spacing:.05em;
+  }
+
+
+
+  /* ---------- voice（口コミ） ---------- */
+  .voice-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:24px;
+  }
+  @media(max-width:900px){.voice-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.voice-grid{grid-template-columns:1fr;}}
+  .voice-card{
+    background:var(--sand);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:28px 26px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .voice-stars{color:var(--gold);font-size:15px;letter-spacing:2px;}
+  .voice-body{
+    font-size:13.5px;
+    color:#3c3a33;
+    line-height:1.95;
+    flex:1;
+  }
+  .voice-body::before{
+    content:'\201C';
+    font-family:'Cormorant Garamond',serif;
+    font-size:36px;
+    color:var(--gold);
+    line-height:.6;
+    display:block;
+    margin-bottom:8px;
+  }
+  .voice-meta{
+    font-size:11.5px;
+    color:#8a8270;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+  }
+  .voice-rating-detail{
+    display:flex;justify-content:center;gap:32px;
+    flex-wrap:wrap;
+    margin-top:40px;
+    padding:28px;
+    background:var(--green-deep);
+    border-radius:4px;
+    color:var(--cream);
+  }
+  .voice-rating-item{text-align:center;}
+  .voice-rating-item .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:34px;color:var(--gold);line-height:1;
+  }
+  .voice-rating-item .label{font-size:11px;opacity:.7;margin-top:4px;letter-spacing:.06em;}
+
+  /* ---------- faq ---------- */
+  .faq-list{display:flex;flex-direction:column;gap:0;}
+  .faq-item{border-bottom:1px solid var(--line);}
+  .faq-item:first-child{border-top:1px solid var(--line);}
+  .faq-q{
+    display:flex;align-items:flex-start;gap:16px;
+    padding:22px 4px;
+    cursor:pointer;
+    list-style:none;
+    font-size:15px;
+    color:var(--green-deep);
+    font-weight:600;
+  }
+  .faq-q::marker{display:none;}
+  .faq-icon{
+    flex-shrink:0;
+    width:26px;height:26px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-size:14px;color:var(--gold);
+    margin-top:1px;
+    transition:background .2s;
+  }
+  details[open] .faq-icon{background:var(--gold);color:var(--cream);}
+  .faq-a{
+    padding:0 4px 22px 42px;
+    font-size:14px;
+    color:#5a5747;
+    line-height:2;
+  }
+
+  /* ============================================================
+     スマホ専用レイアウト（640px以下）
+  ============================================================ */
+  @media(max-width:640px){
+
+    /* セクション余白を縮小 */
+    section{padding:72px 0;}
+    .wrap{padding:0 20px;}
+
+    /* ヒーロー */
+    .hero{padding-top:66px;min-height:auto;}
+    .hero-content{padding:32px 20px 48px;}
+    .eyebrow{font-size:12px;margin-bottom:10px;}
+    .hero h1{font-size:28px;line-height:1.5;margin-bottom:16px;}
+    .hero h1 br{display:none;}
+    .hero p.lead{font-size:14px;margin-bottom:22px;}
+    .badges{gap:8px;margin-bottom:24px;}
+    .badge{padding:6px 14px;font-size:11.5px;}
+    .cta{font-size:13px;padding:13px 24px;}
+    .scrolldown{display:none!important;}
+
+    /* About */
+    .about{grid-template-columns:1fr;gap:28px;}
+    .about-photo{aspect-ratio:3/2;}
+    .icon-row{grid-template-columns:1fr;gap:14px;}
+
+    /* Gallery */
+    .gallery-grid{grid-template-columns:1fr;}
+    .gallery-grid figure:first-child{grid-row:auto;grid-column:auto;aspect-ratio:4/3;}
+    .gallery-grid figure{aspect-ratio:4/3;}
+
+    /* Section head */
+    .section-head{margin-bottom:36px;}
+
+    /* Hours */
+    .hours-block{padding:28px 20px;}
+
+    /* Reserve */
+    .reserve-grid{gap:32px;}
+    .qr-frame{padding:24px;}
+
+    /* Menu */
+    .menu-grid{gap:20px;}
+    .menu-name{font-size:13px;}
+    .menu-price{font-size:16px;}
+    .menu-row{padding:12px 18px;gap:10px;}
+    .menu-category-head{padding:14px 18px;font-size:12.5px;}
+
+    /* Access */
+    .access-block{padding:20px;}
+    .access-block p{font-size:13.5px;}
+    .access-direction{font-size:12.5px;}
+
+    /* Contact */
+    .contact-inner{padding:30px 0 10px;}
+    .contact-inner p{font-size:14px;}
+
+    /* Footer */
+    .foot-grid{flex-direction:column;gap:28px;margin-bottom:32px;align-items:flex-start;}
+    .foot-brand .brand{font-size:30px;}
+    .foot-right{align-items:flex-start;width:100%;}
+    .foot-reserve{width:100%;justify-content:center;}
+    .foot-tagline{font-size:12px;}
+    .foot-address{font-size:12px;}
+    footer{padding:48px 0 24px;}
+    /* 口コミ */
+    .voice-rating-detail{gap:20px;padding:20px 16px;}
+    .voice-rating-item .num{font-size:26px;}
+    /* FAQ */
+    .faq-q{font-size:14px;}
+    .faq-a{font-size:13px;padding-bottom:18px;}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <div class="brand en">MAERIM</div>
+    <div class="navlinks" id="navlinks">
+      <a href="#about"   onclick="closeNav()">concept</a>
+      <a href="#voice"   onclick="closeNav()">voice</a>
+      <a href="#menu"    onclick="closeNav()">menu</a>
+      <a href="#reserve" onclick="closeNav()">reserve</a>
+      <a href="#access"  onclick="closeNav()">access</a>
+      <a href="#contact" onclick="closeNav()">contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ハンバーガーボタン（headerの外でz-index独立） -->
+<div class="hamburger" id="hamburger" onclick="toggleNav()">
+  <span></span><span></span><span></span>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" style="padding:0;">
+  <img class="hero-photo" src="https://crayonimg.e-shops.jp/cms-dimg/1256912/3019751/1000_666.png" alt="MAERIM 店内・施術風景">
+  <div class="hero-overlay"></div>
+  <svg class="hero-river" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <path d="M -50 120 C 200 60, 280 260, 480 220 C 700 180, 760 380, 1000 340 C 1150 320, 1180 440, 1300 420"
+      fill="none" stroke="#B98A33" stroke-width="1.4" stroke-opacity="0.5"/>
+    <path d="M -50 260 C 180 220, 260 420, 470 380 C 690 340, 770 540, 990 500 C 1140 480, 1180 600, 1300 580"
+      fill="none" stroke="#B98A33" stroke-width="1" stroke-opacity="0.28"/>
+    <path d="M -50 460 C 220 520, 300 700, 520 660 C 720 620, 800 780, 1020 760"
+      fill="none" stroke="#B98A33" stroke-width="0.8" stroke-opacity="0.18"/>
+  </svg>
+  <div class="hero-content">
+    <p class="eyebrow en">Thai Traditional Massage · Narimasu, Tokyo</p>
+    <h1>山あいの静けさを、<br>成増でゆっくりと。</h1>
+    <p class="lead">タイ古式マッサージ MAERIM ―— 7月1日、成増に OPEN。<br>
+    身体をゆっくり伸ばしながら全身をほぐす、完全予約制のリラクゼーションサロンです。</p>
+    <div class="badges">
+      <span class="badge">完全予約制</span>
+      <span class="badge">初めての方歓迎</span>
+      <span class="badge">2026.7.1 OPEN</span>
+    </div>
+    <a class="cta" href="#reserve">ご予約はこちら →</a>
+  </div>
+  <div class="scrolldown en">SCROLL</div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Concept</span>
+      <h2>癒しのひととき</h2>
+    </div>
+    <div class="about">
+      <div class="reveal">
+        <div class="about-photo">
+          <img src="photos/treatment-01.jpg" alt="施術の様子">
+        </div>
+        <p>チェンマイ郊外の渓谷「メーリム」の穏やかな自然をイメージした、1席だけのプライベートサロン。オーナーセラピストが本場チェンマイで学んだ15年の技術で、お一人おひとりのお身体に向き合います。</p>
+        <p>深いストレッチと心地よいリズムで、肩や腰のこわばりをゆっくりと解きほぐし、心までゆるむ穏やかな時間をお届けします。忙しい毎日の中で、ほっと一息つける場所でありたいと思っています。</p>
+      </div>
+      <div class="icon-row reveal">
+        <div class="icon-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v6M8 21l4-9 4 9M6 9c2 2 10 2 12 0" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>本場チェンマイの技術</h3>
+          <p>タイ古式歴15年のオーナーが、深いストレッチと心地よいリズムで全身をほぐします。</p>
+        </div>
+        <div class="icon-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 3" stroke-linecap="round"/></svg>
+          <h3>完全1席・個室</h3>
+          <p>周りを気にせず、ゆったりとお過ごしいただける完全プライベートな空間です。</p>
+        </div>
+        <div class="icon-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18c4-10 12-10 16 0" stroke-linecap="round"/><circle cx="12" cy="8" r="3"/></svg>
+          <h3>お身体に合わせた施術</h3>
+          <p>その日の状態やお悩みを丁寧に伺い、力加減もお好みに合わせます。</p>
+        </div>
+        <div class="icon-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1H4a1 1 0 01-1-1z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22V12h6v10" stroke-linecap="round"/></svg>
+          <h3>こだわりの空間</h3>
+          <p>チェンマイの風を感じるタイテイストのインテリアで、非日常の時間を演出します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Gallery</span>
+      <h2>店内・施術風景</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <figure>
+        <img src="photos/gallery-01.jpg" alt="チェンマイをイメージした店内">
+      </figure>
+      <figure>
+        <img src="photos/gallery-02.jpg" alt="施術前後もゆったり過ごせる空間">
+      </figure>
+      <figure>
+        <img src="photos/gallery-03.jpg" alt="深いストレッチで全身スッキリ">
+      </figure>
+    </div>
+    <div class="gallery-captions reveal">
+      <p class="gallery-caption-text">チェンマイの穏やかな自然をイメージした店内は、タイ雑貨やグリーンに囲まれた温かみある空間。施術前後もゆったりお過ごしいただけます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VOICE ===== -->
+<section id="voice">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Voice</span>
+      <h2>お客様の声</h2>
+    </div>
+
+    <div class="voice-grid">
+
+      <div class="voice-card reveal">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-body">指圧だけでは解決しないと思っていた首肩腰が動くようになりました。落ち着いた雰囲気で、非日常を感じられる空間でした。正直、人に教えたくない気もしますけれど、繁盛してほしい気持ちの方が大きいです。</p>
+        <div class="voice-meta">まにまに様・男性・50代 / 2026.7</div>
+      </div>
+
+      <div class="voice-card reveal">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-body">足元から腰、首にかけて丁寧にほぐしていただき、凝っていた肩や腰がとてもすっきりしました！施術後には冷たい飲み物をいただき、自宅でできる肩こり解消のストレッチもアドバイスしてもらえて大変ありがたかったです。</p>
+        <div class="voice-meta">この様・男性・40代 / 2026.7</div>
+      </div>
+
+      <div class="voice-card reveal">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-body">長年の信頼のある凄腕のセラピストさんが成増駅1分以内で新しくお店をはじめたとのことで伺いました。10階なので騒音の心配もなく、マッサージを受けるには最高の場所でした。初めての方でもオススメです。</p>
+        <div class="voice-meta">つな様・男性・50代 / 2026.7</div>
+      </div>
+
+    </div>
+
+    <div class="voice-rating-detail reveal">
+      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">総合評価</div></div>
+      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">雰囲気</div></div>
+      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">接客サービス</div></div>
+      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">技術・仕上がり</div></div>
+      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">メニュー・料金</div></div>
+    </div>
+    <p class="menu-note" style="margin-top:14px;">ホットペッパービューティー掲載 口コミ5件・平均5.0点（2026年7月現在）</p>
+
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Menu &amp; Price</span>
+      <h2>メニュー・料金</h2>
+    </div>
+
+    <div class="menu-grid">
+
+      <!-- タイ古式マッサージ単品 -->
+      <div class="menu-category reveal">
+        <div class="menu-category-head">基本メニュー</div>
+        <div class="menu-items">
+          <div class="menu-row">
+            <div class="menu-name">タイ古式マッサージ 65分</div>
+            <div class="menu-price">¥6,000</div>
+          </div>
+          <div class="menu-row">
+            <div class="menu-name">タイ古式マッサージ 95分</div>
+            <div class="menu-price">¥9,000</div>
+          </div>
+          <div class="menu-row">
+            <div class="menu-name">タイ古式マッサージ 120分</div>
+            <div class="menu-price">¥12,000</div>
+          </div>
+          <div class="menu-row">
+            <div class="menu-name">タイ古式マッサージ 150分</div>
+            <div class="menu-price">¥15,000</div>
+          </div>
+          <div class="menu-row">
+            <div class="menu-name">タイ古式マッサージ 180分</div>
+            <div class="menu-price">¥18,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- セット＋オプション -->
+      <div>
+        <div class="menu-category reveal" style="margin-bottom:18px;">
+          <div class="menu-category-head">セットメニュー</div>
+          <div class="menu-items">
+            <div class="menu-row">
+              <div class="menu-name">足裏＆タイ古式マッサージ 90分</div>
+              <div class="menu-price">¥9,000</div>
+            </div>
+            <div class="menu-row">
+              <div class="menu-name">足裏＆タイ古式マッサージ 120分</div>
+              <div class="menu-price">¥12,000</div>
+            </div>
+            <div class="menu-row">
+              <div class="menu-name">角質ケア 30分＋タイ古式マッサージ 60分</div>
+              <div class="menu-price">¥9,000</div>
+            </div>
+            <div class="menu-row">
+              <div class="menu-name">ハーバルボール 30分＋タイ古式マッサージ 90分</div>
+              <div class="menu-price">¥12,000</div>
+            </div>
+            <div class="menu-row">
+              <div class="menu-name">タイ古式マッサージ 120分＋ヘッド 30分</div>
+              <div class="menu-price">¥15,000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-category reveal">
+          <div class="menu-category-head">オプション</div>
+          <div class="menu-items">
+            <div class="menu-row">
+              <div class="menu-name">足裏 30分</div>
+              <div class="menu-price">¥3,000</div>
+            </div>
+            <div class="menu-row">
+              <div class="menu-name">ヘッドマッサージ</div>
+              <div class="menu-price">¥3,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /menu-grid -->
+
+    <p class="menu-note">表示価格はすべて税込です。オプションの組み合わせも承ります。</p>
+    <div class="menu-cta">
+      <a class="cta" href="#reserve">ご予約・空き状況はこちら →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== HOURS ===== -->
+<section id="hours">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Hours</span>
+      <h2>営業時間</h2>
+    </div>
+    <div class="hours-block reveal">
+      <div>
+        <h3>営業時間</h3>
+        <div class="hours-table">
+          <div><span>平日</span><span>10:00 – 18:00<br><small style="opacity:.7;">最終受付 16:30</small></span></div>
+          <div><span>土日祝</span><span>10:00 – 22:00<br><small style="opacity:.7;">最終受付 21:00</small></span></div>
+        </div>
+      </div>
+      <div>
+        <h3>ご案内</h3>
+        <p class="hours-note">
+          不定休のため、最新のご予約状況は予約サイトからご確認いただけます。<br><br>
+          施術中は電話に出ることができません。<br>
+          ご協力・ご理解のほどよろしくお願いいたします。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESERVE ===== -->
+<section id="reserve">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Reservation</span>
+      <h2>ご予約方法</h2>
+    </div>
+    <div class="reserve-grid reveal">
+      <div class="qr-frame">
+        <img src="https://crayonimg.e-shops.jp/cms-dimg/1256912/3039286/540_540.png" alt="LINE公式アカウント QRコード" style="width:160px;height:160px;object-fit:contain;border-radius:2px;">
+        <span>LINE 公式アカウント</span>
+      </div>
+      <ol class="steps">
+        <li><span class="num en">1</span><div><h4>LINEを友達追加</h4><p>QRコードを読み込み、MAERIM公式LINEを友達追加してください。</p></div></li>
+        <li><span class="num en">2</span><div><h4>トーク画面を開く</h4><p>トーク画面下部の「予約ボタン」をタップします。</p></div></li>
+        <li><span class="num en">3</span><div><h4>日時を選んで予約完了</h4><p>空き状況から希望の日時を選び、予約を確定してください。</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>初めてでも大丈夫ですか？</summary>
+        <p class="faq-a">はい、初めての方も多くご来店いただいています。施術前にお身体の状態やお悩みを丁寧に伺いますので、安心してお越しください。力加減もご希望に合わせて調整いたします。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>男性でも利用できますか？</summary>
+        <p class="faq-a">はい、男性のお客様も大歓迎です。完全個室のプライベート空間ですので、人目を気にせずゆったりとお過ごしいただけます。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>着替えは必要ですか？</summary>
+        <p class="faq-a">着替えをご用意しています。動きやすい服装に着替えていただいてから施術を行います。手ぶらでお越しいただいて問題ありません。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>タイ古式マッサージって痛くないですか？</summary>
+        <p class="faq-a">「痛気持ちいい」という感覚が特徴です。力加減はご要望に合わせてお気軽にお申し付けください。初めての方には無理のない強さで施術いたします。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>当日予約はできますか？</summary>
+        <p class="faq-a">はい、空き状況によっては当日のご予約も承っています。LINEまたは予約サイトより空き状況をご確認のうえ、お気軽にご連絡ください。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>どのコースがおすすめですか？</summary>
+        <p class="faq-a">初めての方には65分または95分のタイ古式マッサージがおすすめです。全身をじっくりほぐしたい方には120分以上、足裏もあわせてケアしたい方にはセットメニューが人気です。</p>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-q"><span class="faq-icon">Q</span>施術中の電話対応はできますか？</summary>
+        <p class="faq-a">施術中はお電話に出ることができません。ご用の際はLINEまたはお問い合わせフォームよりご連絡いただけますと幸いです。ご協力・ご理解のほどよろしくお願いいたします。</p>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== ACCESS ===== -->
+<section id="access">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Access</span>
+      <h2>アクセス</h2>
+    </div>
+    <div class="access reveal">
+      <!-- 1段目：所在地 -->
+      <div class="access-block reveal">
+        <h3>所在地</h3>
+        <p>東京都板橋区成増1-14-15　アーバンスパークビル 1005</p>
+        <div class="access-stations">
+          <span class="access-station-tag">地下鉄成増駅 徒歩1分</span>
+          <span class="access-station-tag">成増駅（東武） 徒歩2分</span>
+        </div>
+      </div>
+
+      <!-- 2段目：道案内 -->
+      <div class="access-block reveal">
+        <h3>道案内</h3>
+        <p class="access-direction">
+          <strong>地下鉄成増駅</strong>（東京メトロ有楽町線・副都心線）をご利用の場合：4番出口を出て右側へお進みください。<br>
+          <strong>成増駅</strong>（東武東上線）をご利用の場合：南口を出て左方向へ。川越街道方面へ向かい、成増一丁目交差点をまっすぐ進んで道を渡ったところにある建物です。<br><br>
+          1階にアフラックの店舗が入っています。建物左側の斜面を登って入口へ。エレベーターで10階までお越しください。降りて左側の<strong>緑のドア</strong>の先が1005号室です。
+        </p>
+      </div>
+
+      <!-- 3段目：外観写真（左）＋ Google マップ（右） -->
+      <div class="access-photo-map reveal">
+        <div class="storefront-photo">
+          <img src="photos/storefront-01.jpg" alt="アーバンスパークビル外観">
+        </div>
+        <div class="access-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500!2d139.63244593413492!3d35.77573296825859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018ed62b420ca07%3A0x1236cb743472e0bf!2z44K_44Kk5Y-k5byP44Oe44OD44K144O844K4IE1BRVJJTQ!5e0!3m2!1sja!2sjp!4v1784682435388!5m2!1sja!2sjp"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="MAERIM アクセスマップ">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Contact</span>
+      <h2>お問い合わせ</h2>
+    </div>
+    <div class="contact-inner reveal">
+      <p>ご不明な点やご相談など、お気軽にお問い合わせください。<br>フォームよりご連絡いただけましたら、順次ご返信いたします。</p>
+      <a href="https://crayon-app.e-shops.jp/contactus/view/1256912/166026/" class="contact-btn button_B2 bold buttonColor10 fontSize_13 radius3 paddingHeight_05em paddingWidth_Max button3d cboxElement"><div>お問い合わせ</div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand en">MAERIM</div>
+        <div class="foot-tagline en">Thai Traditional Massage · Narimasu</div>
+        <div class="foot-address">
+          東京都板橋区成増1-14-15 アーバンスパークビル 1005<br>
+          地下鉄成増駅 徒歩1分 / 成増駅（東武） 徒歩2分
+        </div>
+      </div>
+      <div class="foot-right">
+        <a class="foot-reserve" href="#reserve">ご予約はこちら →</a>
+        <div class="sns">
+          <a href="#" aria-label="ブログ" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 4h16v16H4z" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L2.25 2.25h6.985l4.265 5.638L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/mae_rim7" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="#" aria-label="LINE" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M12 2C6.477 2 2 6.065 2 11.108c0 4.535 3.583 8.332 8.437 9.01.328.071.775.217.888.498.102.257.067.659.033.919l-.144.864c-.044.257-.203 1.004.88.548 1.082-.457 5.836-3.437 7.964-5.885C21.435 15.386 22 13.32 22 11.108 22 6.065 17.523 2 12 2zm-3.5 13.25H6.25a.75.75 0 01-.75-.75v-5.5a.75.75 0 011.5 0v4.75H8.5a.75.75 0 010 1.5zm2.75-.75a.75.75 0 01-1.5 0v-5.5a.75.75 0 011.5 0v5.5zm5.5 0a.75.75 0 01-.648.743l-2.852-3.754v3.011a.75.75 0 01-1.5 0v-5.5a.75.75 0 01.648-.743l2.852 3.754V8.75a.75.75 0 011.5 0v5.75zm2.75-4h-1.25v1h1.25a.75.75 0 010 1.5h-1.25v1h1.25a.75.75 0 010 1.5H18.25a.75.75 0 01-.75-.75v-5.5a.75.75 0 01.75-.75h1.25a.75.75 0 010 1.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 MAERIM All Rights Reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ハンバーガーメニュー
+  function toggleNav(){
+    const isOpen = document.getElementById('navlinks').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeNav(){
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('navlinks').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  const header = document.getElementById('siteHeader');
+  const hbg = document.getElementById('hamburger');
+  window.addEventListener('scroll', () => {
+    const solid = window.scrollY > 40;
+    header.classList.toggle('solid', solid);
+    if(hbg) hbg.classList.toggle('bg-solid', solid);
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.15 });
+  reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
