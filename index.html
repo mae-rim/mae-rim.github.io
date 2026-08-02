@@ -495,63 +495,6 @@
     letter-spacing:.05em;
   }
 
-
-
-  /* ---------- voice（口コミ） ---------- */
-  .voice-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:24px;
-  }
-  @media(max-width:900px){.voice-grid{grid-template-columns:1fr 1fr;}}
-  @media(max-width:560px){.voice-grid{grid-template-columns:1fr;}}
-  .voice-card{
-    background:var(--sand);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:28px 26px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-  }
-  .voice-stars{color:var(--gold);font-size:15px;letter-spacing:2px;}
-  .voice-body{
-    font-size:13.5px;
-    color:#3c3a33;
-    line-height:1.95;
-    flex:1;
-  }
-  .voice-body::before{
-    content:'\201C';
-    font-family:'Cormorant Garamond',serif;
-    font-size:36px;
-    color:var(--gold);
-    line-height:.6;
-    display:block;
-    margin-bottom:8px;
-  }
-  .voice-meta{
-    font-size:11.5px;
-    color:#8a8270;
-    padding-top:14px;
-    border-top:1px solid var(--line);
-  }
-  .voice-rating-detail{
-    display:flex;justify-content:center;gap:32px;
-    flex-wrap:wrap;
-    margin-top:40px;
-    padding:28px;
-    background:var(--green-deep);
-    border-radius:4px;
-    color:var(--cream);
-  }
-  .voice-rating-item{text-align:center;}
-  .voice-rating-item .num{
-    font-family:'Cormorant Garamond',serif;
-    font-size:34px;color:var(--gold);line-height:1;
-  }
-  .voice-rating-item .label{font-size:11px;opacity:.7;margin-top:4px;letter-spacing:.06em;}
-
   /* ---------- faq ---------- */
   .faq-list{display:flex;flex-direction:column;gap:0;}
   .faq-item{border-bottom:1px solid var(--line);}
@@ -650,9 +593,7 @@
     .foot-tagline{font-size:12px;}
     .foot-address{font-size:12px;}
     footer{padding:48px 0 24px;}
-    /* 口コミ */
-    .voice-rating-detail{gap:20px;padding:20px 16px;}
-    .voice-rating-item .num{font-size:26px;}
+
     /* FAQ */
     .faq-q{font-size:14px;}
     .faq-a{font-size:13px;padding-bottom:18px;}
@@ -666,7 +607,6 @@
     <div class="brand en">MAERIM</div>
     <div class="navlinks" id="navlinks">
       <a href="#about"   onclick="closeNav()">concept</a>
-      <a href="#voice"   onclick="closeNav()">voice</a>
       <a href="#menu"    onclick="closeNav()">menu</a>
       <a href="#reserve" onclick="closeNav()">reserve</a>
       <a href="#access"  onclick="closeNav()">access</a>
@@ -769,48 +709,6 @@
     <div class="gallery-captions reveal">
       <p class="gallery-caption-text">チェンマイの穏やかな自然をイメージした店内は、タイ雑貨やグリーンに囲まれた温かみある空間。施術前後もゆったりお過ごしいただけます。</p>
     </div>
-  </div>
-</section>
-
-<!-- ===== VOICE ===== -->
-<section id="voice">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="en">Voice</span>
-      <h2>お客様の声</h2>
-    </div>
-
-    <div class="voice-grid">
-
-      <div class="voice-card reveal">
-        <div class="voice-stars">★★★★★</div>
-        <p class="voice-body">指圧だけでは解決しないと思っていた首肩腰が動くようになりました。落ち着いた雰囲気で、非日常を感じられる空間でした。正直、人に教えたくない気もしますけれど、繁盛してほしい気持ちの方が大きいです。</p>
-        <div class="voice-meta">まにまに様・男性・50代 / 2026.7</div>
-      </div>
-
-      <div class="voice-card reveal">
-        <div class="voice-stars">★★★★★</div>
-        <p class="voice-body">足元から腰、首にかけて丁寧にほぐしていただき、凝っていた肩や腰がとてもすっきりしました！施術後には冷たい飲み物をいただき、自宅でできる肩こり解消のストレッチもアドバイスしてもらえて大変ありがたかったです。</p>
-        <div class="voice-meta">この様・男性・40代 / 2026.7</div>
-      </div>
-
-      <div class="voice-card reveal">
-        <div class="voice-stars">★★★★★</div>
-        <p class="voice-body">長年の信頼のある凄腕のセラピストさんが成増駅1分以内で新しくお店をはじめたとのことで伺いました。10階なので騒音の心配もなく、マッサージを受けるには最高の場所でした。初めての方でもオススメです。</p>
-        <div class="voice-meta">つな様・男性・50代 / 2026.7</div>
-      </div>
-
-    </div>
-
-    <div class="voice-rating-detail reveal">
-      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">総合評価</div></div>
-      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">雰囲気</div></div>
-      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">接客サービス</div></div>
-      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">技術・仕上がり</div></div>
-      <div class="voice-rating-item"><div class="num">5.0</div><div class="label">メニュー・料金</div></div>
-    </div>
-    <p class="menu-note" style="margin-top:14px;">ホットペッパービューティー掲載 口コミ5件・平均5.0点（2026年7月現在）</p>
-
   </div>
 </section>
 
@@ -1058,7 +956,7 @@
     </div>
     <div class="contact-inner reveal">
       <p>ご不明な点やご相談など、お気軽にお問い合わせください。<br>フォームよりご連絡いただけましたら、順次ご返信いたします。</p>
-      <a href="https://crayon-app.e-shops.jp/contactus/view/1256912/166026/" class="contact-btn button_B2 bold buttonColor10 fontSize_13 radius3 paddingHeight_05em paddingWidth_Max button3d cboxElement"><div>お問い合わせ</div></a>
+      <a href="mailto:xxxxx@yyy.zzz" class="contact-btn button_B2 bold buttonColor10 fontSize_13 radius3 paddingHeight_05em paddingWidth_Max button3d cboxElement"><div>お問い合わせ</div></a>
     </div>
   </div>
 </section>
