@@ -13,6 +13,62 @@
   @media(max-width:640px){
     html{scroll-padding-top:24px;}
   }
+
+  #voice .voice-summary{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;
+    padding:18px 20px;margin-bottom:26px;
+    border:1px solid rgba(185,138,51,.28);border-radius:3px;
+    background:rgba(185,138,51,.05);
+  }
+  #voice .voice-score{
+    font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1;
+    color:#B98A33;font-weight:500;letter-spacing:.01em;
+  }
+  #voice .voice-stars{letter-spacing:2px;color:#B98A33;font-size:15px;}
+  #voice .voice-stars .off{color:rgba(185,138,51,.3);}
+  #voice .voice-count{font-size:13px;color:#7d7566;line-height:1.7;}
+  #voice .voice-count a{color:#B98A33;text-decoration:underline;text-underline-offset:3px;}
+  #voice .voice-summary .voice-spacer{flex:1 1 auto;}
+
+  #voice .voice-list{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));}
+  #voice .voice-card{
+    border:1px solid rgba(0,0,0,.08);border-radius:3px;background:#fff;
+    padding:20px 20px 18px;display:flex;flex-direction:column;gap:10px;
+  }
+  #voice .voice-card-head{display:flex;align-items:center;gap:11px;}
+  #voice .voice-avatar{
+    width:34px;height:34px;flex:0 0 34px;border-radius:50%;
+    background:rgba(185,138,51,.14);color:#B98A33;
+    display:grid;place-items:center;font-size:15px;font-weight:600;
+  }
+  #voice .voice-meta{min-width:0;line-height:1.5;}
+  #voice .voice-name{font-size:13.5px;color:#4a4238;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  #voice .voice-when{font-size:11.5px;color:#9a9080;}
+  #voice .voice-card .voice-stars{font-size:13px;}
+  #voice .voice-text{font-size:14px;line-height:2;color:#5b5348;white-space:pre-wrap;word-break:break-word;}
+  #voice .voice-more{
+    align-self:flex-start;background:none;border:0;padding:0;cursor:pointer;
+    font:inherit;font-size:12.5px;color:#B98A33;text-decoration:underline;text-underline-offset:3px;
+  }
+  #voice .voice-reply{
+    border-left:2px solid rgba(185,138,51,.35);padding:2px 0 2px 13px;margin-top:2px;
+  }
+  #voice .voice-reply-label{font-size:11.5px;color:#B98A33;margin-bottom:5px;}
+  #voice .voice-reply p{font-size:13px;line-height:1.95;color:#7d7566;white-space:pre-wrap;margin:0;}
+  #voice .voice-flag{font-size:11px;color:#b4ab9c;text-decoration:none;align-self:flex-end;margin-top:auto;}
+  #voice .voice-flag:hover{text-decoration:underline;}
+
+  #voice .voice-note{margin-top:22px;font-size:12px;line-height:1.9;color:#9a9080;}
+  #voice .voice-note summary{cursor:pointer;color:#7d7566;}
+  #voice .voice-note ul{margin:8px 0 0;padding-left:1.2em;}
+  #voice .voice-note li{margin-bottom:3px;}
+  #voice .voice-state{font-size:13px;color:#9a9080;padding:8px 0;}
+  #voice .voice-cta{margin-top:26px;text-align:center;}
+  @media(max-width:600px){
+    #voice .voice-list{grid-template-columns:1fr;}
+    #voice .voice-score{font-size:32px;}
+  }
+
   body{
     margin:0;
     background:var(--cream);
@@ -269,6 +325,7 @@
   .hours-block h3{color:var(--sand);font-size:16px;margin:0 0 18px;letter-spacing:.05em;}
   .hours-table{font-size:14px;}
   .hours-table div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(251,248,241,.15);}
+  .hours-sub{opacity:.7;}
   .hours-note{font-size:12.5px;color:rgba(251,248,241,.7);margin-top:18px;line-height:1.9;}
 
   /* ---------- reservation ---------- */
@@ -280,6 +337,9 @@
     padding:30px;
     display:flex;flex-direction:column;align-items:center;gap:16px;
     border-radius:4px;
+  }
+  .qr-image{
+    width:160px;height:160px;object-fit:contain;border-radius:2px;display:block;
   }
   .qr-frame .qr-ph{
     width:160px;height:160px;
@@ -386,6 +446,7 @@
     gap:16px;
   }
   .menu-row:last-child{border-bottom:none;}
+  .menu-category--compact{margin-bottom:18px;}
   .menu-name{font-size:14px;color:var(--ink);}
   .menu-sub{font-size:11.5px;color:#8a8270;margin-top:3px;}
   .menu-price{
@@ -420,6 +481,11 @@
     text-align:center;
     margin:0;
     line-height:2;
+  }
+  .contact-note{
+    font-size:12.5px;
+    color:#9a9080;
+    margin-top:-12px;
   }
   .contact-btn{
     display:inline-flex;
