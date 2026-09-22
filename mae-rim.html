@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Shippori+Mincho+B1:wght@500;700&family=Noto+Sans+JP:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-V44VPKJNM0"></script>
 <script>
@@ -27,6 +28,7 @@
       <a href="#about"   onclick="closeNav()">concept</a>
       <a href="#menu"    onclick="closeNav()">menu</a>
       <a href="#reserve" onclick="closeNav()">reserve</a>
+      <a href="#voice"   onclick="closeNav()">voice</a>
       <a href="#access"  onclick="closeNav()">access</a>
       <a href="#contact" onclick="closeNav()">contact</a>
     </div>
@@ -39,7 +41,7 @@
 </div>
 
 <!-- ===== HERO ===== -->
-<section class="hero" style="padding:0;">
+<section class="hero">
   <img class="hero-photo" src="https://crayonimg.e-shops.jp/cms-dimg/1256912/3019751/1000_666.png" alt="MAERIM 店内・施術風景">
   <div class="hero-overlay"></div>
   <svg class="hero-river" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +171,7 @@
 
       <!-- セット＋オプション -->
       <div>
-        <div class="menu-category reveal" style="margin-bottom:18px;">
+        <div class="menu-category reveal menu-category--compact">
           <div class="menu-category-head">セットメニュー</div>
           <div class="menu-items">
             <div class="menu-row">
@@ -231,8 +233,8 @@
       <div>
         <h3>営業時間</h3>
         <div class="hours-table">
-          <div><span>平日</span><span>10:00 – 18:00<br><small style="opacity:.7;">最終受付 16:30</small></span></div>
-          <div><span>土日祝</span><span>10:00 – 22:00<br><small style="opacity:.7;">最終受付 21:00</small></span></div>
+          <div><span>平日</span><span>10:00 – 18:00<br><small class="hours-sub">最終受付 16:30</small></span></div>
+          <div><span>土日祝</span><span>10:00 – 22:00<br><small class="hours-sub">最終受付 21:00</small></span></div>
         </div>
       </div>
       <div>
@@ -256,7 +258,7 @@
     </div>
     <div class="reserve-grid reveal">
       <div class="qr-frame">
-        <img src="https://crayonimg.e-shops.jp/cms-dimg/1256912/3039286/540_540.png" alt="LINE公式アカウント QRコード" style="width:160px;height:160px;object-fit:contain;border-radius:2px;">
+        <img class="qr-image" src="https://crayonimg.e-shops.jp/cms-dimg/1256912/3039286/540_540.png" alt="LINE公式アカウント QRコード">
         <span>LINE 公式アカウント</span>
       </div>
       <ol class="steps">
@@ -315,6 +317,47 @@
 
     </div>
 
+  </div>
+</section>
+
+<!-- ===== VOICE (Google口コミ) ===== -->
+<section id="voice">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="en">Voice</span>
+      <h2>お客様の声</h2>
+    </div>
+
+    <div class="reveal">
+      <!-- 総合評価：Googleの数値をそのまま自動表示（ここは絶対に加工しない） -->
+      <div class="voice-summary" id="voiceSummary" hidden>
+        <span class="voice-score" id="voiceScore">–</span>
+        <span>
+          <span class="voice-stars" id="voiceStars"></span>
+          <span class="voice-count" id="voiceCount"></span>
+        </span>
+        <span class="voice-spacer"></span>
+        <span class="voice-count" id="voiceUpdated"></span>
+      </div>
+
+      <div class="voice-state" id="voiceState">口コミを読み込んでいます…</div>
+      <div class="voice-list" id="voiceList"></div>
+
+      <details class="voice-note">
+        <summary>この欄の掲載基準について</summary>
+        <ul>
+          <li>Google に投稿されたクチコミを、投稿日の新しい順にそのまま自動取得して掲載しています（1日1回更新）。</li>
+          <li>星の数による選別は行っていません。低い評価も同じ基準で掲載されます。</li>
+          <li>本文の編集・要約は行いません。長い投稿のみ画面上で折りたたんで表示しています。</li>
+          <li>本文のない評価のみの投稿、および施術の効果・効能に触れる表現を含む投稿は、法令（景品表示法・薬機法など）上の理由で掲載を見送っています。</li>
+          <li>平均評価と総件数は Google の値をそのまま表示しています。すべてのクチコミは Google の店舗ページでご確認いただけます。</li>
+        </ul>
+      </details>
+
+      <div class="voice-cta">
+        <a class="cta" href="#reserve">ご予約はこちら →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -384,7 +427,7 @@
           メールでお問い合わせ
         </div>
       </a>
-      <p style="font-size:12.5px;color:#9a9080;margin-top:-12px;">※ メールアプリが開きます。件名・本文のテンプレートが自動入力されます。</p>
+      <p class="contact-note">※ メールアプリが開きます。件名・本文のテンプレートが自動入力されます。</p>
     </div>
   </div>
 </section>
@@ -432,6 +475,137 @@
 </footer>
 
 <script src="script.js"></script>
+
+<!-- ===== Google口コミ描画（reviews.json を読むだけ。APIキーはここに置かない） ===== -->
+<script>
+(function () {
+  var SRC       = 'reviews.json';  // バッチが生成するファイル
+  var MAX_CARDS = 6;               // 表示件数（新着順の上から）
+  var CLAMP     = 120;             // 何文字で「続きを読む」にするか
+
+  var $ = function (id) { return document.getElementById(id); };
+  var listEl = $('voiceList'), stateEl = $('voiceState');
+  if (!listEl) return;
+
+  function stars(n) {
+    var full = Math.round(n || 0), s = '';
+    for (var i = 1; i <= 5; i++) s += (i <= full ? '★' : '<span class="off">★</span>');
+    return s;
+  }
+
+  function jaAgo(iso) {
+    var t = Date.parse(iso);
+    if (isNaN(t)) return '';
+    var d = Math.floor((Date.now() - t) / 86400000);
+    if (d <= 0)  return '今日';
+    if (d === 1) return '昨日';
+    if (d < 7)   return d + '日前';
+    if (d < 31)  return Math.floor(d / 7) + '週間前';
+    if (d < 365) return Math.floor(d / 30) + 'か月前';
+    return Math.floor(d / 365) + '年前';
+  }
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function card(r) {
+    var c = el('div', 'voice-card');
+
+    var head = el('div', 'voice-card-head');
+    var name = (r.author || 'Google ユーザー').trim();
+    head.appendChild(el('span', 'voice-avatar', name.slice(0, 1)));
+    var meta = el('div', 'voice-meta');
+    meta.appendChild(el('div', 'voice-name', name));
+    meta.appendChild(el('div', 'voice-when', r.relativeTime || jaAgo(r.time)));
+    head.appendChild(meta);
+    c.appendChild(head);
+
+    var st = el('div', 'voice-stars');
+    st.innerHTML = stars(r.rating);
+    st.setAttribute('aria-label', '5点満点中' + r.rating + '点');
+    c.appendChild(st);
+
+    // 本文は一切書き換えない。長いものを折りたたむだけ。
+    var full = String(r.text || '');
+    var body = el('p', 'voice-text');
+    c.appendChild(body);
+    if (full.length > CLAMP) {
+      body.textContent = full.slice(0, CLAMP) + '…';
+      var btn = el('button', 'voice-more', '続きを読む');
+      btn.type = 'button';
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('data-open') === '1';
+        body.textContent = open ? full.slice(0, CLAMP) + '…' : full;
+        btn.textContent = open ? '続きを読む' : '閉じる';
+        btn.setAttribute('data-open', open ? '0' : '1');
+      });
+      c.appendChild(btn);
+    } else {
+      body.textContent = full;
+    }
+
+    // オーナー返信。低評価は「隠す」のではなく「返信とセットで見せる」
+    if (r.reply && r.reply.text) {
+      var rep = el('div', 'voice-reply');
+      rep.appendChild(el('div', 'voice-reply-label', 'MAERIM からの返信'));
+      rep.appendChild(el('p', null, r.reply.text));
+      c.appendChild(rep);
+    }
+
+    if (r.flagUri) {
+      var f = el('a', 'voice-flag', 'この投稿を報告');
+      f.href = r.flagUri; f.target = '_blank'; f.rel = 'noopener nofollow';
+      c.appendChild(f);
+    }
+    return c;
+  }
+
+  function fail(msg) {
+    stateEl.textContent = msg;
+    stateEl.hidden = false;
+  }
+
+  fetch(SRC, { cache: 'no-cache' })
+    .then(function (res) {
+      if (!res.ok) throw new Error(res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      var place = data.place || {};
+      var items = (data.reviews || []).slice(0, MAX_CARDS);
+
+      if (place.rating) {
+        $('voiceScore').textContent = Number(place.rating).toFixed(1);
+        $('voiceStars').innerHTML = stars(place.rating);
+        var link = place.reviewUri || place.googleMapsUri || '#';
+        $('voiceCount').innerHTML =
+          ' Google のクチコミ ' + (place.userRatingCount || 0) + '件の平均 ' +
+          '<a href="' + link + '" target="_blank" rel="noopener">すべて見る</a>';
+        if (data.generatedAt) {
+          $('voiceUpdated').textContent =
+            '最終更新 ' + new Date(data.generatedAt).toLocaleDateString('ja-JP');
+        }
+        $('voiceSummary').hidden = false;
+      }
+
+      if (!items.length) {
+        fail('現在表示できるクチコミがありません。Google の店舗ページからご覧ください。');
+        return;
+      }
+      var frag = document.createDocumentFragment();
+      items.forEach(function (r) { frag.appendChild(card(r)); });
+      listEl.appendChild(frag);
+      stateEl.hidden = true;
+    })
+    .catch(function () {
+      fail('クチコミを読み込めませんでした。Google の店舗ページからご覧ください。');
+    });
+})();
+</script>
 
 </body>
 </html>

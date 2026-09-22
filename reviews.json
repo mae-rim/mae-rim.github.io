@@ -1,0 +1,74 @@
+{
+  "generatedAt": "2026-09-22T05:26:00.630Z",
+  "expiresAt": "2026-10-22T05:26:00.630Z",
+  "source": "places",
+  "place": {
+    "name": "タイ古式マッサージ MAERIM",
+    "rating": 5,
+    "userRatingCount": 8,
+    "googleMapsUri": "https://maps.google.com/?cid=1312460041381667007&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+    "reviewUri": "https://maps.google.com/?cid=1312460041381667007&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA&hl=ja"
+  },
+  "policy": {
+    "sort": "Places API は関連度順の最大5件しか返さないため、その5件を投稿日順に並べたもの",
+    "ratingFilter": "なし（星の数による選別はしていない）",
+    "minChars": 15,
+    "skipped": {
+      "noText": 0,
+      "tooShort": 0,
+      "expression": 0
+    }
+  },
+  "reviews": [
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT205WVNIRm5OSEJXTjA1WVN6Rm9iamhHT1hRMVgyYxAB",
+      "rating": 5,
+      "text": "オーナー兼セラピストさんのこだわりが詰まった隠れ家サロンです。\nインテリアや小物のセンスが抜群で、空間にいるだけでリラックスできます。\n\n施術は経験と技術が本当に高く、身体の状態に合わせて的確にほぐしてくれます。\n腰や首肩がしっかり軽くなり、効果を実感できました。\n\n雰囲気・接客・技術すべてが素晴らしく、安心しておすすめできるサロンです。",
+      "time": "2026-07-24T14:26:34.390257158Z",
+      "relativeTime": null,
+      "author": "Masatsugu Funakoshi",
+      "reply": null,
+      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT205WVNIRm5OSEJXTjA1WVN6Rm9iamhHT1hRMVgyYxAB&d=17924085&t=1"
+    },
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB",
+      "rating": 5,
+      "text": "数年間お世話になっている方がオープンしたお店です。\n駅からのアクセスも良く、店内も落ち着ける空間になっています。\n施術もトークも良くて、心身ともに癒されます。",
+      "time": "2026-07-11T10:23:08.854700696Z",
+      "relativeTime": null,
+      "author": "佐藤良太",
+      "reply": null,
+      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB&d=17924085&t=1"
+    },
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB",
+      "rating": 5,
+      "text": "初めてタイ古式マッサージを受けさせてもらいました。\n重かった身体がすごい軽くなりました！\n身体の硬さに合わせて施術をしてもらるのでとても安心しました。\nお店の雰囲気も落ち着いておりリラックスできる空間です。\nまた行きたいと思います！",
+      "time": "2026-07-05T08:39:04.750033493Z",
+      "relativeTime": null,
+      "author": "ケムール",
+      "reply": null,
+      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB&d=17924085&t=1"
+    },
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB",
+      "rating": 5,
+      "text": "長年お世話になっている施術師さんが新しく開いたサロン。\nビルの10階にお店があり、入口前からの眺めが良くて気分が上がったところ、入ると店内もキレイで落ち着いていて居心地の良い空間になっていました。\n施術はいつも絶妙な力加減で完璧なので、安心してゆっくりできました。\nこれからも通わせて頂きます！",
+      "time": "2026-07-04T08:12:26.532154950Z",
+      "relativeTime": null,
+      "author": "ハジメ",
+      "reply": null,
+      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB&d=17924085&t=1"
+    },
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB",
+      "rating": 5,
+      "text": "店内の雰囲気もよく清潔感もあり、極上の癒しを堪能出来ました。\n施術も力加減がちょうどよく、凝っているところをピンポイントでほぐされていく心地よさがたまりません。\nお客様としてもてなすというよりは、一緒に楽しい時間をつくろうという気遣いが感じられ終始リラックスして過ごすことが出来ました。",
+      "time": "2026-07-03T04:08:37.076728749Z",
+      "relativeTime": null,
+      "author": "LOUKA ROUX",
+      "reply": null,
+      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB&d=17924085&t=1"
+    }
+  ]
+}
