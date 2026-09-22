@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch reviews
         env:
-          MODE: places                     # Places API を使う場合は places
+          MODE: gbp                     # Places API を使う場合は places
           OUT: reviews.json             # index.html と同じ階層に置く
           # --- MODE=gbp のとき ---
           GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
