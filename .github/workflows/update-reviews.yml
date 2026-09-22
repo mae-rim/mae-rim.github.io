@@ -1,0 +1,44 @@
+name: Update Google reviews
+
+on:
+  schedule:
+    - cron: '0 20 * * *'   # UTC 20:00 = JST 05:00 毎日
+  workflow_dispatch:        # 手動実行も可
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Fetch reviews
+        env:
+          MODE: gbp                     # Places API を使う場合は places
+          OUT: reviews.json             # index.html と同じ階層に置く
+          # --- MODE=gbp のとき ---
+          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
+          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_ACCOUNT_ID: ${{ secrets.GBP_ACCOUNT_ID }}
+          GBP_LOCATION_ID: ${{ secrets.GBP_LOCATION_ID }}
+          # --- MODE=places のとき ---
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          # 「すべて見る」リンク用。どちらのモードでも設定しておく
+          PLACE_ID: ${{ secrets.PLACE_ID }}
+          PLACE_NAME: 'タイ古式マッサージ MAERIM'
+        run: node scripts/fetch-reviews.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name  'reviews-bot'
+          git config user.email 'reviews-bot@users.noreply.github.com'
+          git add reviews.json
+          git diff --staged --quiet || git commit -m "chore: update Google reviews"
+          git push
