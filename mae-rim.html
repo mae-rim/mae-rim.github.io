@@ -556,10 +556,12 @@
       c.appendChild(rep);
     }
 
-    if (r.flagUri) {
-      var f = el('a', 'voice-flag', 'この投稿を報告');
-      f.href = r.flagUri; f.target = '_blank'; f.rel = 'noopener nofollow';
-      c.appendChild(f);
+    if (r.googleMapsUri) {
+      var sourceLink = el('a', 'voice-map-link', 'Googleマップで見る');
+      sourceLink.href = r.googleMapsUri;
+      sourceLink.target = '_blank';
+      sourceLink.rel = 'noopener';
+      c.appendChild(sourceLink);
     }
     return c;
   }
