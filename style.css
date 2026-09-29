@@ -55,8 +55,8 @@
   }
   #voice .voice-reply-label{font-size:11.5px;color:#B98A33;margin-bottom:5px;}
   #voice .voice-reply p{font-size:13px;line-height:1.95;color:#7d7566;white-space:pre-wrap;margin:0;}
-  #voice .voice-flag{font-size:11px;color:#b4ab9c;text-decoration:none;align-self:flex-end;margin-top:auto;}
-  #voice .voice-flag:hover{text-decoration:underline;}
+  #voice .voice-map-link{font-size:11px;color:#b4ab9c;text-decoration:none;align-self:flex-end;margin-top:auto;}
+  #voice .voice-map-link:hover{text-decoration:underline;}
 
   #voice .voice-note{margin-top:22px;font-size:12px;line-height:1.9;color:#9a9080;}
   #voice .voice-note summary{cursor:pointer;color:#7d7566;}

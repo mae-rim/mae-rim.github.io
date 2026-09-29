@@ -89,7 +89,7 @@ async function fromPlaces() {
     'id', 'displayName', 'rating', 'userRatingCount', 'googleMapsUri',
     'reviews.name', 'reviews.rating', 'reviews.text', 'reviews.originalText',
     'reviews.publishTime', // 👈 relativePublishTime を削除しました
-    'reviews.authorAttribution', 'reviews.flagContentUri', 'reviews.googleMapsUri',
+    'reviews.authorAttribution', 'reviews.googleMapsUri',
   ].join(',');
 
   const res = await fetch(
@@ -107,8 +107,8 @@ async function fromPlaces() {
     time: r.publishTime,
     relativeTime: r.relativePublishTime ?? null,
     author: r.authorAttribution?.displayName ?? null,
+    googleMapsUri: r.googleMapsUri ?? null,
     reply: null,                       // Places API はオーナー返信を返さない
-    flagUri: r.flagContentUri ?? null, // 不適切コンテンツ報告リンク（表示が必須）
   })).sort(byNewest);
 
   return {
@@ -167,7 +167,6 @@ async function fromGbp() {
     relativeTime: null,
     author: r.reviewer?.displayName ?? null,
     reply: r.reviewReply ? { text: r.reviewReply.comment, time: r.reviewReply.updateTime } : null,
-    flagUri: null,
   })).sort(byNewest);
 
   const placeId = process.env.PLACE_ID ?? null;
