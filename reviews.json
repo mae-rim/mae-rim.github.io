@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T00:07:30.807Z",
-  "expiresAt": "2026-10-29T00:07:30.807Z",
+  "generatedAt": "2026-09-29T09:38:40.213Z",
+  "expiresAt": "2026-10-29T09:38:40.213Z",
   "source": "places",
   "place": {
     "name": "タイ古式マッサージ MAERIM",
@@ -27,8 +27,8 @@
       "time": "2026-07-24T14:26:34.390257158Z",
       "relativeTime": null,
       "author": "Masatsugu Funakoshi",
-      "reply": null,
-      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT205WVNIRm5OSEJXTjA1WVN6Rm9iamhHT1hRMVgyYxAB&d=17924085&t=1"
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT205WVNIRm5OSEJXTjA1WVN6Rm9iamhHT1hRMVgyYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
     },
     {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB",
@@ -37,8 +37,8 @@
       "time": "2026-07-11T10:23:08.854700696Z",
       "relativeTime": null,
       "author": "佐藤良太",
-      "reply": null,
-      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB&d=17924085&t=1"
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
     },
     {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB",
@@ -47,8 +47,8 @@
       "time": "2026-07-05T08:39:04.750033493Z",
       "relativeTime": null,
       "author": "ケムール",
-      "reply": null,
-      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB&d=17924085&t=1"
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
     },
     {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB",
@@ -57,8 +57,8 @@
       "time": "2026-07-04T08:12:26.532154950Z",
       "relativeTime": null,
       "author": "ハジメ",
-      "reply": null,
-      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB&d=17924085&t=1"
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
     },
     {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB",
@@ -67,8 +67,8 @@
       "time": "2026-07-03T04:08:37.076728749Z",
       "relativeTime": null,
       "author": "LOUKA ROUX",
-      "reply": null,
-      "flagUri": "https://www.google.com/local/content/rap/report?postId=Ci9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB&d=17924085&t=1"
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
     }
   ]
 }
