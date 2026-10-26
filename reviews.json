@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-25T22:14:09.422Z",
-  "expiresAt": "2026-11-24T22:14:09.422Z",
+  "generatedAt": "2026-10-26T23:31:04.586Z",
+  "expiresAt": "2026-11-25T23:31:04.586Z",
   "source": "places",
   "place": {
     "name": "タイ古式マッサージ MAERIM",
@@ -51,6 +51,16 @@
       "reply": null
     },
     {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT21KUlpHZFVOMjlQY1ZWbmVtaENVMVZ5TmxCaGMyYxAB",
+      "rating": 5,
+      "text": "タイで研修を積んだセラピストによる本格タイ古式マッサージ。丁寧な施術と、落ち着いた清潔な店内で、最高のリラックスタイムを過ごせました。オススメです！",
+      "time": "2026-07-04T11:23:02.929857739Z",
+      "relativeTime": null,
+      "author": "かみちや",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KUlpHZFVOMjlQY1ZWbmVtaENVMVZ5TmxCaGMyYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
+    },
+    {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB",
       "rating": 5,
       "text": "長年お世話になっている施術師さんが新しく開いたサロン。\nビルの10階にお店があり、入口前からの眺めが良くて気分が上がったところ、入ると店内もキレイで落ち着いていて居心地の良い空間になっていました。\n施術はいつも絶妙な力加減で完璧なので、安心してゆっくりできました。\nこれからも通わせて頂きます！",
@@ -58,16 +68,6 @@
       "relativeTime": null,
       "author": "ハジメ",
       "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
-      "reply": null
-    },
-    {
-      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB",
-      "rating": 5,
-      "text": "店内の雰囲気もよく清潔感もあり、極上の癒しを堪能出来ました。\n施術も力加減がちょうどよく、凝っているところをピンポイントでほぐされていく心地よさがたまりません。\nお客様としてもてなすというよりは、一緒に楽しい時間をつくろうという気遣いが感じられ終始リラックスして過ごすことが出来ました。",
-      "time": "2026-07-03T04:08:37.076728749Z",
-      "relativeTime": null,
-      "author": "LOUKA ROUX",
-      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2s0MFUyRlNXR28xZDA5eGJXUm5RMFpCUWtoTU1WRRAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
       "reply": null
     }
   ]
