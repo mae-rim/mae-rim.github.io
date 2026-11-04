@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T01:56:34.848Z",
-  "expiresAt": "2026-12-03T01:56:34.848Z",
+  "generatedAt": "2026-11-04T00:19:18.961Z",
+  "expiresAt": "2026-12-04T00:19:18.961Z",
   "source": "places",
   "place": {
     "name": "タイ古式マッサージ MAERIM",
@@ -41,16 +41,6 @@
       "reply": null
     },
     {
-      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB",
-      "rating": 5,
-      "text": "数年間お世話になっている方がオープンしたお店です。\n駅からのアクセスも良く、店内も落ち着ける空間になっています。\n施術もトークも良くて、心身ともに癒されます。",
-      "time": "2026-07-11T10:23:08.854700696Z",
-      "relativeTime": null,
-      "author": "佐藤良太",
-      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT25OTFlVdG9aelJGWjE4d1IxZ3hTakl5U2tNMmNrRRAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
-      "reply": null
-    },
-    {
       "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25Gb2FrWXlaV1p6U0cxVGFrSTFVSFV3WXpSM09VRRAB",
       "rating": 5,
       "text": "初めてタイ古式マッサージを受けさせてもらいました。\n重かった身体がすごい軽くなりました！\n身体の硬さに合わせて施術をしてもらるのでとても安心しました。\nお店の雰囲気も落ち着いておりリラックスできる空間です。\nまた行きたいと思います！",
@@ -68,6 +58,16 @@
       "relativeTime": null,
       "author": "かみちや",
       "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21KUlpHZFVOMjlQY1ZWbmVtaENVMVZ5TmxCaGMyYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
+      "reply": null
+    },
+    {
+      "id": "places/ChIJB8ogtGLtGGARv-ByNHTLNhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB",
+      "rating": 5,
+      "text": "長年お世話になっている施術師さんが新しく開いたサロン。\nビルの10階にお店があり、入口前からの眺めが良くて気分が上がったところ、入ると店内もキレイで落ち着いていて居心地の良い空間になっていました。\n施術はいつも絶妙な力加減で完璧なので、安心してゆっくりできました。\nこれからも通わせて頂きます！",
+      "time": "2026-07-04T08:12:26.532154950Z",
+      "relativeTime": null,
+      "author": "ハジメ",
+      "googleMapsUri": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2tSMFVsOUJWbFZ4UlZrMGEwNTBWRXhNTFc4MWNuYxAB!2m1!1s0x6018ed62b420ca07:0x1236cb743472e0bf",
       "reply": null
     }
   ]
